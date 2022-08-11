@@ -1,2 +1,203 @@
 @import '../../themes/variable';
 @import '../../base/components/components';
+
+// Header
+.header{
+    background: $bg-c1-dark;
+    height: 50px;
+    border: 1px solid $bg-c1-dark;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        .logo{
+            img{
+    
+            }
+        }
+    
+        .header-login{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .cart{
+                img{
+    
+                }
+                span{
+                    @include text($text-2xl, $text-regular, $text-c1-white);
+                }
+            }
+            a{
+                @include text($text-base,$text-regular,#f7f7f7);
+                margin-left: 10px;
+                text-decoration: none;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+// Navigation
+.navigation{
+    height: 50px;
+    background: $bg-c1-white;
+    .container{
+        
+        ul{
+            list-style: none;
+            margin: 0;
+            li{
+                display: inline-block;
+                line-height: 50px;
+                margin-right: 20px;
+                &:hover{
+                    a{
+                        color: #AE18E2;
+                        &.active{
+                            &::before{
+                                background: #AE18E2;
+                            }
+                        }
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    @include text($text-xl,$text-regular,$text-c1-dark);
+                    transition: all .3s;
+                    &.active{
+                        font-weight: $text-semibold;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            bottom: -5px;
+                            width: 100%;
+                            height: 1px;
+                            background: $bg-c1-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// carousel
+.carousel-style{
+    height: 530px;
+    background: url('../../../img/bg-carousel.png') no-repeat bottom right;
+    background-size: contain;
+    .container{
+        position: relative;
+        .carousel-wrap{
+            display: flex;
+            align-items: center;
+            .carousel-left{
+                img{
+                    width: 100%;
+                }
+            }
+            .carousel-right{
+                h1{
+                    @include text($text-3xl, $text-semibold,$text-c1-dark);
+                }
+                p{
+                    @include text($text-xl, $text-regular,$text-c1-dark);
+                }
+                .btnStyle{
+                    padding: 12px 42px;
+                    border-radius: 0;
+                    background: transparent;
+                    box-shadow: 0 0 0 40px #F8B653 inset;
+                    border: none;
+                    transition: all .65s;
+                    &:hover{
+                        box-shadow: 0 0 0 1px #F8B653 inset; 
+                        color: #F8B653; 
+                    }
+                }
+            }
+        }
+        .icon-left{
+            position: absolute;
+            top: 50%;
+            left: -5%;
+        }
+        .icon-right{
+            position: absolute;
+            top: 50%;
+            right: -5%;
+    
+        }
+    }
+   
+    
+}
+
+// product feature
+.product-feature{
+    padding: 50px 0;
+    .container{
+        .title{
+            @include text($text-3xl, $text-semibold,$text-c1-dark);
+            margin-bottom: 50px;
+        }
+        .row{
+            .col-lg-4{
+                .card{
+                    min-height: 580px;
+                    img{
+
+                    }
+                    .card-body{
+                        .card-title{
+                            @include text(24px, $text-semibold,$text-c1-dark);
+                        }
+                        .card-text{
+                            @include text($text-xl, $text-regular,#CBC9C9);
+                            display: block;
+  	                        display: -webkit-box;
+                            height: 60px;
+                            -webkit-line-clamp: 2;  /* số dòng hiển thị */
+  	                        -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .card-footer{
+                        padding: 0;
+                        display: flex;
+                        border:none;
+                        #btnBuy{
+                            text-decoration: none;
+                            font-size: 24px;
+                            color: $text-c1-dark;
+                            box-shadow: 0 0 0 40px #E1B067 inset;
+                            width: 60%;
+                            text-align: center;
+                            &:hover{
+                                box-shadow: 0 0 0 1px #E1B067 inset; 
+                            }
+                        }
+                        .price{
+                            width: 40%;
+                            background: #DEDDDC;
+                            line-height: 60px;
+                            display: inline-block;
+                            @include text(24px, $text-semibold,$text-c1-dark);
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

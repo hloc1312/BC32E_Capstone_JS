@@ -1,2 +1,179 @@
 @import '../../themes/variable';
 @import '../../base/components/components';
+
+// Header
+.header{
+    background: $bg-c1-dark;
+    height: 50px;
+    border: 1px solid $bg-c1-dark;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        .logo{
+            img{
+    
+            }
+        }
+    
+        .header-login{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .cart{
+                img{
+    
+                }
+                span{
+                    @include text($text-2xl, $text-regular, $text-c1-white);
+                }
+            }
+            a{
+                @include text($text-base,$text-regular,#f7f7f7);
+                margin-left: 10px;
+                text-decoration: none;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+// Navigation
+.navigation{
+    height: 50px;
+    background: $bg-c1-white;
+    .container{
+        
+        ul{
+            list-style: none;
+            margin: 0;
+            li{
+                display: inline-block;
+                line-height: 50px;
+                margin-right: 20px;
+                &:hover{
+                    a{
+                        color: #AE18E2;
+                        &.active{
+                            &::before{
+                                background: #AE18E2;
+                            }
+                        }
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    @include text($text-xl,$text-regular,$text-c1-dark);
+                    transition: all .3s;
+                    &.active{
+                        font-weight: $text-semibold;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            bottom: -5px;
+                            width: 100%;
+                            height: 1px;
+                            background: $bg-c1-dark;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Register form
+.register-form{
+        margin-top: 30px;
+    .container{
+        .title{
+            @include text($text-3xl,$text-semibold,$text-c1-dark);
+        text-align: center;
+
+        }
+        form{
+            margin-top: 30px;
+            .row{
+                .col-lg-6{
+                   
+                    &:last-child{
+                        .form-group{
+                            &:last-child{
+                                input{
+                                    width: initial;
+                                }
+
+                            }
+                        }
+                        .btnSubmit{
+                            @extend .btnStyle;
+                            padding: 10px 80px;
+                            background: transparent;
+                            box-shadow: 0 0 0 40px #AE18E2 inset;
+                            transition: all .65s;
+                            &:hover{
+                                box-shadow: 0 0 0 1px #AE18E2 inset;
+                            }
+                        }
+                    }
+                    .form-group{
+                        width: 100%;
+                        position: relative;
+                        input{
+                            border-top: transparent;
+                            border-left: transparent;
+                            border-right: transparent;               
+                            border-width: 5px;
+                            border-color: #AE18E2;
+                            @include text($text-2xl,$text-regular,$text-c1-dark);
+                            width: 80%;
+                            
+                            &:focus{
+                                outline: none;
+                            }
+                            &[type="radio"]{
+                                width: 30px !important;
+                                height: 30px
+                            }
+                            
+                            
+                            
+
+                        }
+                        span{
+                            @include text($text-xl,$text-semibold,#F50E0E);
+                            position: absolute;                            
+                            right: 20%;
+                            bottom: 50%;
+
+                        }
+                        label{
+                            &:nth-child(1){
+                                margin-right: 15px;
+                            }
+                            @include text($text-2xl,$text-regular,$text-c1-dark);
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+.footer{
+    margin-top: 40px;
+    img{
+        width: 100%;
+        
+    }
+}

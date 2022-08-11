@@ -1,0 +1,17 @@
+@import '../../themes/variable';
+.btnStyle{
+    @include button($text-base,$text-regular,$text-c1-white,#AE18E2,15px,1px solid #AE18E2,10px,$bg-c1-white,#AE18E2);
+}
+.btnStyle-buyNow{
+    @extend .btnStyle;
+    padding: 12px 42px;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: 0 0 0 40px #F8B653 inset;
+    border: none;
+    transition: all .65s;
+    &:hover{
+        box-shadow: 0 0 0 1px #F8B653 inset; 
+        color: #F8B653; 
+    }
+}

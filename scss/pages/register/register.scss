@@ -112,6 +112,7 @@
                                 }
 
                             }
+                            
                         }
                         .btnSubmit{
                             @extend .btnStyle;
@@ -123,6 +124,7 @@
                                 box-shadow: 0 0 0 1px #AE18E2 inset;
                             }
                         }
+                        
                     }
                     .form-group{
                         width: 100%;
@@ -141,7 +143,9 @@
                             }
                             &[type="radio"]{
                                 width: 30px !important;
-                                height: 30px
+                                height: 30px;
+                                accent-color: #AE18E2;
+                                
                             }
                             
                             

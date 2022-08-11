@@ -146,6 +146,7 @@
 .register-form .container form .row .col-lg-6 .form-group input[type=radio] {
   width: 30px !important;
   height: 30px;
+  accent-color: #AE18E2;
 }
 .register-form .container form .row .col-lg-6 .form-group span {
   font-size: 20px;

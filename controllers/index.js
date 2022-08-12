@@ -33,7 +33,7 @@ const renderProduct = (arrProduct) => {
             id="btnBuy"
             >Buy now</a
             >
-            <span class="price">${val.price}</span>
+            <span class="price">${val.price}$</span>
         </div>
         </div>
     </div>
